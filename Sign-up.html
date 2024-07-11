@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="Sign-up.css">
+</head>
+<body>
+    <div class="signup-container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h2>Créer un compte</h2>
+        <form id="signup-form">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirmer le mot de passe</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <div id="error-message"></div>
+        <div class="social-login">
+            <button id="google-login" class="social-button google">
+                <img src="https://img.clerk.com/static/google.svg?width=160" alt="Sign in with Google">
+                Se connecter avec Google
+            </button>
+            <button id="facebook-login" class="social-button facebook">
+                <img src="https://img.clerk.com/static/facebook.svg?width=160" alt="Sign in with Facebook">
+                Se connecter avec Facebook
+            </button>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

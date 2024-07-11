@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clerk.js Example</title>
+    <script
+        async
+        crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_dGFsZW50ZWQtZHJha2UtNjcuY2xlcmsuYWNjb3VudHMuZGV2JA"
+        src="https://talented-drake-67.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+        type="text/javascript"
+    ></script>
+</head>
+<body>
+    <div id="app-content"></div>
+    <div id="user-button"></div>
+    <script>
+        Clerk.load().then(() => {
+            // Vérifier si l'utilisateur est connecté
+            if (Clerk.user) {
+                const userButtonDiv = document.getElementById('user-button');
+                // Afficher le bouton utilisateur
+                Clerk.mountUserButton(userButtonDiv);
+            } else {
+                // Afficher les boutons de connexion et d'inscription si l'utilisateur n'est pas connecté
+                document.getElementById('app-content').innerHTML = `
+                    <div id="auth-buttons">
+                        <button id="sign-in-button">Connexion</button>
+                        <button id="sign-up-button">Inscription</button>
+                    </div>
+                    <div id="auth-container"></div>
+                `;
+
+                // Ajouter des gestionnaires d'événements pour les boutons
+                document.getElementById('sign-in-button').addEventListener('click', () => {
+                    const authContainer = document.getElementById('auth-container');
+                    authContainer.innerHTML = '<div id="sign-in"></div>';
+                    Clerk.mountSignIn(document.getElementById('sign-in'));
+                });
+
+                document.getElementById('sign-up-button').addEventListener('click', () => {
+                    const authContainer = document.getElementById('auth-container');
+                    authContainer.innerHTML = '<div id="sign-up"></div>';
+                    Clerk.mountSignUp(document.getElementById('sign-up'));
+                });
+            }
+        }).catch(err => {
+            console.error('Error loading Clerk:', err);
+        });
+    </script>
+</body>
+</html>

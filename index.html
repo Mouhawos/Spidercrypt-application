@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="styles.css">
+    <title>Spidercrypt</title>
+
+    <!-- Clerk.js initialization -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest"></script>
+    <!-- Script for toggling pricing -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var togglePricingButton = document.getElementById("togglePricingButton");
+            if (togglePricingButton) {
+                togglePricingButton.addEventListener("click", function () {
+                    window.location.href = "Stripe.html";
+                });
+            }
+        });
+    </script>
+
+    <!-- Script for showing contact form -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var contactLink = document.querySelector("nav ul li a[href='#Contact']");
+            var contactFormContainer = document.getElementById("contactFormContainer");
+            if (contactLink && contactFormContainer) {
+                contactLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    contactFormContainer.style.display = "block";
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <header class="header transparent">
+        <nav>
+            <div class="logo-container">
+                <img src="logo.png" alt="Spidercrypt Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://spidercrypt.gitbook.io/spidercrypt-cybersecurity-apis-documentation/">Documentation APIs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://spidercrypt.gitbook.io/white-paper/">White Paper</a></li>
+                <li><a href="Sign-in.html">Sign in</a></li>
+                <li><a href="Sign-up.html">Sign up</a></li>
+            </ul>
+          
+        </nav>
+    </header>
+   
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">Protect your digital world with simple and innovative solutions</h1>
+                    <p>Secure your organization with Spidercrypt's tailored solutions. Whether you're a business or an individual, we provide protection, detection of cyber threats, and customized solutions to meet your needs.</p>
+                    <button id="togglePricingButton">Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero hero-2">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">Utilize SDKs to Facilitate Online Security Integration</h1>
+                    <p>Online protection is crucial. Spidercrypt offers seamless security integration using SDKs for effortless deployment and enhanced cybersecurity.</p>
+                    
+                    <div class="centered-image">
+                       
+                        <img src="carbon.png" alt="Featured Service">
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+       
+        <section class="hero section-hero-3">
+            <div class="api">
+                <img src="hexagonal.gif" alt="Resilience Icon">
+                <div class="api-content">
+                    <h3>Enhanced Resilience Against Cyber Attacks</h3>
+                    <p>Proactively protect your systems against potential threats using our specialized tools for intrusion detection and prevention.</p>
+                </div>
+            </div>
+            <div class="api">
+                <img src="cube-en-cercle.gif" alt="Security Icon">
+                <div class="api-content">
+                    <h3>Robust Application Security</h3>
+                    <p>Effectively safeguard your data against modern cyber threats with our robust solutions by integrating our dedicated security APIs.</p>
+                </div>
+            </div>
+            <div class="api">
+                <img src="cube-3d.gif" alt="Attack Detection Icon" class="api-icon">
+                <div class="api-content">
+                    <h3>Advanced Attack Detection</h3>
+                    <p>Detect and mitigate sophisticated cyber attacks in real-time with our advanced attack detection APIs, ensuring proactive security measures for your systems.</p>
+                </div>
+            </div>
+        </section>
+        <script src="animation.js"></script>
+        
+
+
+
+
+
+        <section class="hero hero-4">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">Innovation at Its Best</h1>
+                    <p>Experience cutting-edge innovation with Spidercrypt. Our products and services are designed to stay ahead of evolving cyber threats, ensuring your digital world is always secure.</p>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="card-container">
+                <!-- First card -->
+                <div class="hero-content card">
+                    <div class="card-content">
+                        <img class="icon top-left-icon" src="connection.gif" alt="Connection Icon">
+                        <h2>Build application security</h2>
+                        <p>Use the API to create and integrate into your application whether you are developing financial protection, threat detection, or cybersecurity applications.</p>
+                    </div>
+                </div>
+            
+                <!-- Second card -->
+                <div class="hero-content card">
+                    <div class="card-content">
+                        <img class="icon top-left-icon" src="password.gif" alt="Password Icon">
+                        <h2>Protect information</h2>
+                        <p>Password generators are essential to protect your information, with generator password and passkey.</p>
+                    </div>
+                </div>
+            
+                <!-- Third card -->
+                <div class="hero-content card">
+                    <div class="card-content">
+                        <img class="icon top-left-icon" src="folder.gif" alt="Folder Icon">
+                        <h2>Share folder and data</h2>
+                        <p>Use Cloud services like Google Cloud, Azure, and others to protect your files and data.</p>
+                    </div>
+                </div>
+            
+                <!-- Fourth card -->
+                <div class="hero-content card">
+                    <div class="card-content">
+                        <img class="icon top-left-icon" src="yuan.gif" alt="Yuan Icon">
+                        <h2>Use token to protect sensitive data</h2>
+                        <p>Tokenize your sensitive information to protect your most important data with innovative and easy solutions.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+        <section class="hero hero-5">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">Customization Services</h1>
+<p>Need customized solutions? Contact our dedicated team to discuss your specific requirements. We're here to provide tailored services that perfectly meet your needs.</p>
+
+                    <!-- Contact button -->
+                    <a href="contact.html" class="button">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/spidercrypt/?viewAsMember=true" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="#" target="_blank"><img src="X.png" alt="X"></a>
+            <a href="#" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    
+        <div id="root"></div>
+        <script src="script.js"></script>
+
+        <p>&copy; 2024 Spidercrypt. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
