@@ -1,109 +1,147 @@
-    /* Reset and General Styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f0f0f0;
-        margin: 0;
-    }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+}
 
-    .container {
-        width: 80%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-    /* Header Styles */
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 10px 0;
-    }
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+section ul {
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     header .container {
-        display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
     }
 
-    header h1 {
-        font-size: 1.5rem;
-    }
-
     header nav ul {
-        list-style-type: none;
-        display: flex;
+        margin-top: 10px;
     }
-
-    header nav ul li {
-        margin-right: 20px;
-    }
-
-    header nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    header nav ul li a:hover {
-        text-decoration: underline;
-    }
-
-    /* Section Styles */
-    section {
-        padding: 40px 0;
-    }
-
-    section h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-
-    section h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-
-    section ul {
-        margin-bottom: 20px;
-    }
-
-    /* Footer Styles */
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-
-    footer p {
-        margin: 0;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        header .container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header nav ul {
-            margin-top: 10px;
-        }
-    }
+}
 
 
-/* Styles pour le logo */
-.logo-container {
+header {
+    z-index: 1000; /* Valeur supérieure pour la superposition */
+    background-color: transparent; /* Fond transparent */
+    width: 100%;
+  }
+  
+  /* Styles pour centrer les éléments de navigation horizontalement */
+  nav {
+    display: flex;
+    justify-content: center; /* Centre horizontalement les éléments de la liste */
+    align-items: center;
+    height: 50px; /* Ajustez la hauteur de la barre de navigation selon vos besoins */
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  li {
+    margin: 0 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #0076e3; /* Couleur de survol bleue */
+  }
+  
+  /* Styles pour le logo */
+  .logo-container {
     display: flex;
     align-items: center;
     margin-right: 50px; /* Augmentez la marge à droite pour décaler davantage le logo vers la droite */
@@ -113,4 +151,12 @@
     width: 100px; /* Ajustez la largeur du logo selon vos besoins */
     height: auto; /* Permet à la hauteur de s'ajuster automatiquement pour conserver les proportions */
   }
-      
+  
+  
+  /* Styles pour la barre de navigation */
+  header {
+    z-index: 1000; /* Valeur supérieure pour la superposition */
+    background-color: transparent; /* Fond transparent */
+    width: 100%;
+    position: relative; /* Permet de positionner les éléments enfants par rapport à cette barre de navigation */
+  }

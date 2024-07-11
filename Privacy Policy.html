@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest"></script>
-    <title>Spidercrypt - Privacy Policy</title>
-    <link rel="stylesheet" href="Privacy Policy.css"> <!-- Link to your external CSS file -->
+    <title>Privacy Policy - Spidercrypt</title>
+
 </head>
 <body>
     <header class="header transparent">
@@ -17,39 +16,192 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="https://spidercrypt.gitbook.io/spidercrypt-cybersecurity-apis-documentation/">Documentation APIs</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="">Withe Paper</a></li>
-                <li><a href="https://large-emu-10.accounts.dev/user">Sign Up</a></li>
+                <li><a href="https://spidercrypt.gitbook.io/white-paper/">White Paper</a></li>
+                <li><a href="Sign-in.html">Sign in</a></li>
+                <li><a href="Sign-up.html">Sign up</a></li>
             </ul>
+          
         </nav>
     </header>
+   
+    <style>
 
-    <section id="privacy-policy">
-        <div class="container">
-            <h2>Privacy Policy</h2>
-            <p>Spidercrypt collects data for the purpose of improving our products, including our APIs and Javis. By using our services, you agree to the collection and use of information in accordance with this policy.</p>
-            
-            <h3>Data Collection</h3>
-            <p>We collect various types of data for the purpose of enhancing our products, including but not limited to:</p>
-            <ul>
-                <li>Information provided voluntarily by users.</li>
-                <li>Automatically collected information, such as cookies.</li>
-            </ul>
-            
-            <h3>Use of Data</h3>
-            <p>The data collected is used solely for the purpose of improving our products and enhancing the user experience. We do not sell or distribute user data to third parties. Data may be used for training our products only.</p>
-            
-            <h3>Consent</h3>
-            <p>By using our services, you consent to the collection and use of your data as described in this policy. We will request your permission before using your data for any purpose other than those set forth in this policy.</p>
-            
-            <h3>Contact Us</h3>
-            <p>If you have any questions or concerns about our privacy policy, please contact us at <a href="mailto:security@spidercrypt.com">security@spidercrypt.com</a>.</p>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #007BFF;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+
+
+        header {
+            z-index: 1000; /* Valeur supérieure pour la superposition */
+            background-color: transparent; /* Fond transparent */
+            width: 100%;
+          }
+          
+          /* Styles pour centrer les éléments de navigation horizontalement */
+          nav {
+            display: flex;
+            justify-content: center; /* Centre horizontalement les éléments de la liste */
+            align-items: center;
+            height: 50px; /* Ajustez la hauteur de la barre de navigation selon vos besoins */
+          }
+          
+          ul {
+            list-style: none;
+            display: flex;
+          }
+          
+          li {
+            margin: 0 20px;
+          }
+          
+          a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            transition: color 0.3s;
+          }
+          
+          a:hover {
+            color: #0076e3; /* Couleur de survol bleue */
+          }
+          
+          /* Styles pour le logo */
+          .logo-container {
+            display: flex;
+            align-items: center;
+            margin-right: 50px; /* Augmentez la marge à droite pour décaler davantage le logo vers la droite */
+          }
+          
+          .logo-container img {
+            width: 100px; /* Ajustez la largeur du logo selon vos besoins */
+            height: auto; /* Permet à la hauteur de s'ajuster automatiquement pour conserver les proportions */
+          }
+          
+          
+          /* Styles pour la barre de navigation */
+          header {
+            z-index: 1000; /* Valeur supérieure pour la superposition */
+            background-color: transparent; /* Fond transparent */
+            width: 100%;
+            position: relative; /* Permet de positionner les éléments enfants par rapport à cette barre de navigation */
+          }
+
+    </style>
+   
+
+    <div class="container">
+        <h1>Privacy Policy</h1>
+
+        <p>At Spidercrypt, we take the privacy of your personal information very seriously. This privacy policy explains what information we collect, how we use it, and how we protect it, as well as your rights regarding your information.</p>
+
+        <h2>1. Introduction</h2>
+        <p>We collect various types of information to provide and improve our service:</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>We collect different types of information:</p>
+        <ul>
+            <li><strong>Personal Information</strong>: such as name, email address, phone number.</li>
+            <li><strong>Technical Information</strong>: such as IP address, browser type, pages visited on our site.</li>
+            <li><strong>Financial Information</strong>: such as credit card details for payment transactions (securely processed by Stripe).</li>
+        </ul>
+
+        <h2>3. Use of Information</h2>
+        <p>We use the collected information to:</p>
+        <ul>
+            <li>Provide, operate, and maintain our services.</li>
+            <li>Improve, personalize, and expand our service.</li>
+            <li>Process transactions and manage payments.</li>
+            <li>Communicate with you, including for customer support.</li>
+            <li>Send updates and important notifications.</li>
+        </ul>
+
+        <h2>4. Sharing of Information</h2>
+        <p>We only share your personal information with third parties in the following cases:</p>
+        <ul>
+            <li>With your explicit consent.</li>
+            <li>To comply with the law or respond to legal requests.</li>
+            <li>To protect our rights, property, and safety, as well as those of our users.</li>
+        </ul>
+
+        <h2>5. Security of Information</h2>
+        <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. This includes using encryption technologies for payment transactions and data storage.</p>
+
+        <h2>6. Your Rights</h2>
+        <p>As a user, you have the right to:</p>
+        <ul>
+            <li>Access your personal information.</li>
+            <li>Correct or update your information.</li>
+            <li>Request deletion of your information.</li>
+            <li>Object to the processing of your personal information.</li>
+            <li>Withdraw your consent at any time (where processing is based on consent).</li>
+        </ul>
+
+        <div class="contact-info">
+            <h2>7. Contact</h2>
+            <p>If you have any questions about this privacy policy, please contact us at:</p>
+            <p>Email: spidercrypt.dev.@gmail.com</p>
         </div>
-    </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Spidercrypt. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Spidercrypt. All rights reserved. | <a href="terme of use.html">Terms of Use</a> |
     </footer>
 </body>
 </html>
