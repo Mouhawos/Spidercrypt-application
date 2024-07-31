@@ -4,35 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
-    <title>Pracing Page - Spidercrypt</title>
+    <title>Pricing Page - Spidercrypt</title>
 
-   < <script async src="https://js.stripe.com/v3/pricing-table.js">
-        document.addEventListener("DOMContentLoaded", function () {
-            // Ajoutez des scripts spécifiques à la page de tarification si nécessaire
-        });
-    </script>
+    <!-- Inclure le script de la bibliothèque Stripe pour le tableau de tarification -->
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 </head>
 <body>
     <header class="header transparent">
-        <!-- Vous pouvez inclure le même en-tête que dans la première page si nécessaire -->
+        <!-- Inclure le même en-tête que dans la première page si nécessaire -->
     </header>
 
     <main>
-        <!-- Ajoutez le contenu spécifique à la page de tarification si nécessaire -->
+        <!-- Contenu spécifique à la page de tarification -->
 
         <!-- Section pour le tableau de tarification -->
         <section class="subscription">
-            <h2></h2>
+            
 
             <!-- Composant personnalisé de tableau de tarification Stripe -->
-            <stripe-pricing-table pricing-table-id="prctbl_1PZPJgEuqwikCsIMEX5yLeZh"
-            publishable-key="pk_live_51PZOTBEuqwikCsIMet2xdAJNKrSusXqtwUKVHaKCs2vnC9U5kg52iaO18aQTikTFerChxoLctrHOokX5n3U7TYnx00xLSLWqNY">
+            <stripe-pricing-table
+                pricing-table-id="prctbl_1PfqIuRtaYReBK0R6IHiW6j8"
+                publishable-key="pk_live_51PZ6ZWRtaYReBK0RU9A12yl6rGytDcUdGJXw7YD4gNLNn7Ylr2dexwarxwRKheLBjS7AeM3l7JJLmOHfOunm0wNJ00PagDI7tN">
             </stripe-pricing-table>
         </section>
     </main>
 
     <footer>
-        <!-- Vous pouvez inclure le même pied de page que dans la première page si nécessaire -->
+        <!-- Inclure le même pied de page que dans la première page si nécessaire -->
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Placez ici les scripts spécifiques à la page de tarification si nécessaire
+            console.log("DOM complètement chargé et analysé");
+            // Vous pouvez accéder et manipuler les éléments DOM ici
+        });
+    </script>
 </body>
 </html>
