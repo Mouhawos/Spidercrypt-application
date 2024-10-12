@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="path/to/your/styles.css"> <!-- Ajoutez votre fichier CSS -->
+    <meta name="description" content="Découvrez nos plans de tarification pour les services Spidercrypt. Choisissez le meilleur plan pour vos besoins en cybersécurité.">
     <title>Pricing Page - Spidercrypt</title>
 
     <!-- Inclure le script de la bibliothèque Stripe pour le tableau de tarification -->
-   <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+    <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 </head>
 <body>
     <header class="header transparent">
@@ -19,12 +20,10 @@
 
         <!-- Section pour le tableau de tarification -->
         <section class="subscription">
-            
-
             <!-- Composant personnalisé de tableau de tarification Stripe -->
-           <stripe-pricing-table pricing-table-id="prctbl_1Q91GzBcGhfpHUXfzHkGlH10"
-publishable-key="pk_live_51PfFZhBcGhfpHUXfXZHdimJoNPqtHJ7QVp6BKNRysAoFed8GJOfQmEJYiVw4VWsvYWCm86mdoxbqpCMq8g5PHFRP00zjTIZUWl">
-</stripe-pricing-table>
+            <stripe-pricing-table pricing-table-id="prctbl_1Q91GzBcGhfpHUXfzHkGlH10"
+            publishable-key="pk_live_51PfFZhBcGhfpHUXfXZHdimJoNPqtHJ7QVp6BKNRysAoFed8GJOfQmEJYiVw4VWsvYWCm86mdoxbqpCMq8g5PHFRP00zjTIZUWl">
+            </stripe-pricing-table>
         </section>
     </main>
 
@@ -34,7 +33,6 @@ publishable-key="pk_live_51PfFZhBcGhfpHUXfXZHdimJoNPqtHJ7QVp6BKNRysAoFed8GJOfQmE
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Placez ici les scripts spécifiques à la page de tarification si nécessaire
             console.log("DOM complètement chargé et analysé");
             // Vous pouvez accéder et manipuler les éléments DOM ici
         });
