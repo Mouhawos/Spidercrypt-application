@@ -338,43 +338,43 @@ User
   padding: 20px; /* Espacement intérieur du contenu des cartes */
 }
 
-.hero.hero-4 .card img {
-  width: 50px; /* Taille des icônes */
-  height: 50px;
-  margin-bottom: 10px; /* Espacement en bas des icônes */
+/* Style des cartes de produits de sécurité */
+.container {
+    padding: 2rem 0;
 }
 
-.hero.hero-4 .card h2 {
-  font-size: 24px; /* Taille des titres des cartes */
-  margin-bottom: 10px; /* Espacement en bas des titres des cartes */
+.card {
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero.hero-4 .card p {
-  font-size: 16px; /* Taille du texte des cartes */
-  line-height: 1.6; /* Interligne du texte pour une meilleure lisibilité */
+.card:hover {
+    transform: translateY(-10px); /* Déplacement vers le haut */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre portée */
 }
 
-.hero.hero-4 .top-left-icon {
-  float: left; /* Aligner à gauche */
+.card-title {
+    font-size: 1.25rem;
+    margin-top: 10px;
 }
 
-.hero.hero-4 .top-right-icon {
-  float: right; /* Aligner à droite */
+.card-body {
+    text-align: center;
+    padding: 1.5rem;
 }
 
-.hero.hero-4 .bottom-left-icon {
-  float: left; /* Aligner à gauche */
+.icon {
+    font-size: 50px;
+    color: #333;
+    margin-top: 20px;
+    transition: color 0.3s ease;
 }
 
-.hero.hero-4 .bottom-right-icon {
-  float: right; /* Aligner à droite */
+.card:hover .icon {
+    color: #007bff; /* Changement de couleur au survol */
 }
-
-.hero.hero-4 .hero-title {
-  font-size: 36px; /* Taille du titre principal */
-  margin-bottom: 20px; /* Espacement en bas du titre principal */
-}
-
 
 
 
