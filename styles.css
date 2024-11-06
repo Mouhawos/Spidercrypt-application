@@ -374,10 +374,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #0076e3; /* Couleur de fond bleue au survol */
-  color: white; /* Couleur du texte en blanc au survol */
+  color: #0076e3; /* Texte bleu au survol */
 }
-
 
 
 .centered-image {
