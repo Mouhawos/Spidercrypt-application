@@ -40,7 +40,7 @@ li {
 .logo-container {
   display: flex;
   align-items: left;
-  margin-left: 300px; /* Marge à droite pour décaler davantage le logo */
+  margin-left: 50px; /* Marge à droite pour décaler davantage le logo */
 }
 
 .logo-container img {
