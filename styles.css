@@ -35,6 +35,7 @@ li {
   margin: 0 20px;
 }
 
+
 /* Styles pour le logo */
 .logo-container {
   display: flex;
@@ -73,6 +74,12 @@ li {
 
 .navbar-nav .nav-item .nav-link:hover {
   color: #007bff;
+}
+
+/* Style pour la navbar responsive */
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
 }
 
 
