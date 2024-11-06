@@ -3,89 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="contact.css">
-    <title>Contact us</title>
+    <title>Contact - Spidercrypt</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5.0.0/dist/reset.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        
+        .header {
+            background: transparent;
+            padding: 20px 0;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #007bff;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .form-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .ant-btn {
+            background-color: #1890ff;
+            color: white;
+            font-size: 16px;
+        }
+
+        .ant-btn:hover {
+            background-color: #40a9ff;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .footer h5 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: #1890ff;
+            text-decoration: none;
+        }
+
+        .footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer hr {
+            margin-top: 20px;
+            border-color: #ddd;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="header transparent">
-        <nav>
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
             <div class="logo-container">
-                <img src="logo.png" alt="spider">
+                <img src="logo.png" alt="Spidercrypt Logo" style="height: 50px;">
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="https://spidercrypt.gitbook.io/spidercrypt-cybersecurity-apis-documentation">Documentation APIs</a></li>
-                <li><a href=" https://spidercrypt.gitbook.io/white-paper/">Withe Paper</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="Sign-up.html">Sign up</a></li>       
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="contact-form">
-            <h2>Contact us for personalized web security solutions </h2>
-            <form id="contactForm" action="#" method="post">
-                <label for="firstName">Name :</label>
-                <input type="text" id="firstName" name="firstName" required>
-
-                <label for="email">Professional email address :</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="companyName">Company Name  :</label>
-                <input type="text" id="companyName" name="companyName">
-
-                <label for="companySize">Size of the company :</label>
-                <select id="companySize" name="companySize">
-                    <option value="1-10">1-10 employees </option>
-                    <option value="11-50">11-50 employees</option>
-                    <option value="51-200">51-200 employees</option>
-                    <!-- Ajoutez d'autres options au besoin -->
-                </select>
-
-                <label for="industry">Activity area :</label>
-                <input type="text" id="industry" name="industry">
-
-                <label for="customizationNeeds">Customization Needs :</label>
-                <textarea id="customizationNeeds" name="customizationNeeds" rows="4" required></textarea>
-
-
-                <label for="budget">Planned budget :</label>
-                <input type="text" id="budget" name="budget">
-
-                <label for="additionalInfo">Something to add ?  </label>
-                <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
-
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        
-            <nav>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Support</a></li>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://spidercrypt.gitbook.io/spidercrypt-cybersecurity-apis-documentation/">API Documentation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://spidercrypt.gitbook.io/white-paper/">White Paper</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sign-in.html">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sign-up.html">Sign Up</a></li>
                 </ul>
-            </nav>
-        
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/company/spidercrypt/?viewAsMember=true" target="_blank"><img src="linkedin.png" alt="Linkedin"></a>
-                <a href="#" target="_blank"><img src="X.png" alt="Twitter"></a>
-                <a href="#" target="_blank"><img src="instagram.png" alt="Instagram"></a>
             </div>
-        
-            
-    
-            
-        
-        <p>&copy; 2024 Spidercrypt. All rights reserved.</p>
-    </footer>
+        </div>
+    </nav>
+</header>
 
+<div class="container">
+    <h2 class="form-title">Contact Us</h2>
+    
+    <div class="form-container">
+        <form action="submit_form.php" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="ant-btn">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>About Us</h5>
+                <p>Spidercrypt offers cutting-edge cybersecurity solutions designed to protect your digital world. Learn more about our services.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="https://spidercrypt.gitbook.io/spidercrypt-cybersecurity-apis-documentation/">API Documentation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://spidercrypt.gitbook.io/white-paper/">White Paper</a></li>
+                    <li><a href="Sign-in.html">Sign In</a></li>
+                    <li><a href="Sign-up.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: <a href="mailto:info@spidercrypt.com">info@spidercrypt.com</a></p>
+                <p>Phone: +1 (800) 123-4567</p>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; 2024 Spidercrypt. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
