@@ -304,29 +304,7 @@ User
   opacity: 1;
   transform: translateY(0);
 }
-.hero.hero-4 {
-  text-align: center; /* Centrer le contenu de la section */
-  padding: 50px 0; /* Espacement intérieur pour aérer le contenu */
-  background-color: #ffffff; /* Couleur de fond blanche */
-  background: none; /* Supprimez le fond de l'image */
-}
 
-.hero.hero-4 .hero-overlay {
-  display: flex;
-  justify-content: center;
-}
-
-.hero.hero-4 .hero-content {
-  max-width: 800px; /* Largeur maximale du contenu pour éviter l'étirement sur des écrans larges */
-  margin: 0 auto; /* Centrer le contenu principal horizontalement */
-}
-
-.hero.hero-4 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-}
 
 .hero.hero-4 .card {
   width: calc(50% - 40px); /* Largeur des cartes */
