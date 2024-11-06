@@ -292,6 +292,7 @@ User
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 
@@ -321,6 +322,10 @@ User
   background-color: #f5fbfe; /* Nouvelle couleur de fond au survol */
 }
 
+
+.icon {
+  font-size: 36px; /* Ajustez la taille ici */
+}
 
 
 
