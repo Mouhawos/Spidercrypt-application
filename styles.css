@@ -36,10 +36,15 @@ li {
 }
 
 
-/* Effet de survol des liens */
+a {
+  color: #000000; /* Couleur noire par défaut */
+  text-decoration: none; /* Supprime le soulignement, si désiré */
+}
+
 a:hover {
   color: #0076e3; /* Couleur bleue au survol */
 }
+
 
 
 /* Styles pour le logo */
