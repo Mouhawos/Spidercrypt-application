@@ -39,7 +39,7 @@ li {
 /* Styles pour le logo */
 .logo-container {
   display: flex;
-  align-items: center;
+  align-items: left;
   margin-left: 300px; /* Marge à droite pour décaler davantage le logo */
 }
 
