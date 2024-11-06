@@ -36,14 +36,6 @@ li {
 }
 
 
-a {
-  color: black; /* Couleur noire par défaut */
-  text-decoration: none; /* Supprime le soulignement si nécessaire */
-}
-
-a:hover {
-  color: #0076e3; /* Couleur bleue au survol */
-}
 
 
 
@@ -376,27 +368,37 @@ footer nav {
   margin: 0 10px; /* Ajoutez de l'espace entre les icônes sociales */
 }
 
-
-/* Styles pour la liste et les boutons */
 body {
   font-family: Arial, sans-serif; /* Utilisation d'une police générique */
   margin: 0;
   padding: 0;
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #ffffff; /* Couleur de fond pour la barre de navigation */
+  border-bottom: 1px solid #ccc; /* Bordure inférieure pour délimiter */
 }
+
 nav ul li {
   float: left; /* Pour aligner les éléments côte à côte */
 }
 
-nav ul li a:hover {
-  background-color: #ffffff; /* Couleur de fond au survol */
+nav ul li a {
+  display: block; /* Assure que le lien prend toute la largeur de l'élément */
+  padding: 14px 20px; /* Espacement intérieur des liens */
+  color: black; /* Couleur du texte par défaut */
+  text-decoration: none; /* Supprimer le soulignement des liens */
 }
+
+nav ul li a:hover {
+  background-color: #0076e3; /* Couleur de fond bleue au survol */
+  color: white; /* Couleur du texte en blanc au survol */
+}
+
 
 
 .centered-image {
