@@ -37,8 +37,8 @@ li {
 
 
 a {
-  color: #000000; /* Couleur noire par défaut */
-  text-decoration: none; /* Supprime le soulignement, si désiré */
+  color: black; /* Couleur noire par défaut */
+  text-decoration: none; /* Supprime le soulignement si nécessaire */
 }
 
 a:hover {
