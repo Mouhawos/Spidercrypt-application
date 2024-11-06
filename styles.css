@@ -316,45 +316,29 @@ User
   padding: 20px; /* Espacement intérieur du contenu des cartes */
 }
 
-/* Style des cartes de produits de sécurité */
-.container {
-    padding: 2rem 0;
-}
-
-.card {
-    margin: 10px;
-    border: none;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px); /* Déplacement vers le haut */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre portée */
-}
-
-.card-title {
-    font-size: 1.25rem;
-    margin-top: 10px;
-}
-
-.card-body {
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.icon {
-    font-size: 50px;
-    color: #333;
-    margin-top: 20px;
-    transition: color 0.3s ease;
-}
-
-.card:hover .icon {
-    color: #007bff; /* Changement de couleur au survol */
-}
-
-
+ .card-body {
+      text-align: center;
+    }
+    .card {
+      margin: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px); /* Déplacement léger vers le haut */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    }
+    .card-title {
+      font-size: 1.25rem;
+      margin-top: 10px;
+    }
+    .icon {
+      font-size: 50px;
+      margin-top: 20px;
+      transition: color 0.3s ease;
+    }
+    .card:hover .icon {
+      color: #007bff; /* Changement de couleur au survol */
+    }
 
 /* Styles pour la cinquième section hero avec une image de fond */
 .hero-5 {
