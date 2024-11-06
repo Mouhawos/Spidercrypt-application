@@ -449,3 +449,29 @@ nav ul li a:hover {
   .btn-contact:hover {
     background-color: #005bb5; /* Bleu plus foncé au survol */
   }
+
+
+/* Menu burger */
+.burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-bar {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+}
+
+/* Menu déroulant (initialement caché) */
+.nav-menu {
+    display: none;
+    list-style: none;
+}
+
+.nav-menu.show {
+    display: block;
+}
+
