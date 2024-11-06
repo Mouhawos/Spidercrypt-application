@@ -359,7 +359,6 @@ nav ul {
   padding: 0;
   overflow: hidden;
   background-color: #ffffff; /* Couleur de fond pour la barre de navigation */
-  border-bottom: 1px solid #ccc; /* Bordure inférieure pour délimiter */
 }
 
 nav ul li {
