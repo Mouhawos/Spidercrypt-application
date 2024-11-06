@@ -35,21 +35,47 @@ li {
   margin: 0 20px;
 }
 
-
-
-
-
 /* Styles pour le logo */
 .logo-container {
   display: flex;
   align-items: center;
-  margin-right: 50px; /* Augmentez la marge à droite pour décaler davantage le logo vers la droite */
+  margin-right: 50px; /* Marge à droite pour décaler davantage le logo */
 }
 
 .logo-container img {
   width: 100px; /* Ajustez la largeur du logo selon vos besoins */
   height: auto; /* Permet à la hauteur de s'ajuster automatiquement pour conserver les proportions */
 }
+
+/* Styles de la barre de navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Marge entre les éléments de navigation */
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #007bff;
+}
+
+
 
 
 /* Styles pour la barre de navigation */
