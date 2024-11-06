@@ -305,18 +305,21 @@ User
   transform: translateY(0);
 }
 
-
 .hero.hero-4 .card {
-  width: calc(50% - 40px); /* Largeur des cartes */
+  width: calc(25% - 40px); /* Largeur de la carte, ajustée pour l'espacement */
+  height: calc(25% - 40px); /* Hauteur égale à la largeur pour un effet carré */
   margin: 20px; /* Espacement entre les cartes */
   background-color: #fff; /* Couleur de fond des cartes */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
   border-radius: 8px; /* Coins arrondis pour les cartes */
   text-align: left; /* Alignement du texte à gauche dans les cartes */
   padding: 20px; /* Espacement intérieur du contenu des cartes */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
- 
 
 /* Styles pour la cinquième section hero avec une image de fond */
 .hero-5 {
