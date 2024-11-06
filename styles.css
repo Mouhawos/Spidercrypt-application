@@ -37,14 +37,16 @@ li {
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: transparent; /* Lien transparent par défaut */
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s ease; /* Transition douce lors du changement de couleur */
 }
 
+/* Effet de survol des liens */
 a:hover {
-  color: #0076e3; /* Couleur de survol bleue */
+  color: #0076e3; /* Couleur bleue au survol */
 }
+
 
 /* Styles pour le logo */
 .logo-container {
