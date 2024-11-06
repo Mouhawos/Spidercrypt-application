@@ -305,12 +305,7 @@ User
   transform: translateY(0);
 }
 
-.hero.hero-4 {
-  display: flex;
-  flex-direction: column; /* Aligne les cartes verticalement */
-  align-items: center; /* Centre les cartes horizontalement */
-  gap: 20px; /* Espacement entre les cartes */
-}
+
 
 .hero.hero-4 .card {
   width: 100%; /* Les cartes prennent toute la largeur du conteneur */
@@ -397,28 +392,11 @@ nav ul {
 nav ul li {
   float: left; /* Pour aligner les éléments côte à côte */
 }
-nav ul li a, .clerk-button {
-  display: block;
-  color: #333;
-  text-align: center;
-  padding: 10px 15px; /* Ajustement du padding pour les liens et les boutons */
-  text-decoration: none;
-  font-size: 14px; /* Réduction de la taille de la police */
-  border-radius: 3px; /* Réduction du rayon de bordure */
-}
+
 nav ul li a:hover {
   background-color: #ffffff; /* Couleur de fond au survol */
 }
-.clerk-button {
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px; /* Marge à gauche pour séparer les boutons */
-}
-.clerk-button:hover {
-  background-color: #0056b3;
-}
+
 
 .centered-image {
   text-align: center;
