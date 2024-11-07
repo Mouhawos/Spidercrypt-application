@@ -547,19 +547,18 @@ nav ul li a:hover {
 
 @media (min-width: 1280px) {
   .navbar-nav .nav-item .nav-link {
-    font-size: 20px; /* Agrandit la taille du texte pour les écrans plus larges */
-    margin-left: 30px; /* Plus d'espacement entre les éléments */
-    padding: 10px 15px; /* Espacement interne autour des liens */
+    font-size: 20px !important;  /* Agrandit la taille du texte pour les écrans plus larges */
+    margin-left: 40px !important;  /* Augmente l'espacement entre les éléments du menu */
+    padding: 10px 20px !important;  /* Ajout de padding pour plus d'espace interne */
+  }
+
+  .logo-container {
+    margin-right: 50px !important;  /* Augmente l'espace à droite du logo */
   }
 
   .logo-container img {
-    width: 120px; /* Taille du logo plus grande sur grands écrans */
+    width: 120px !important;  /* Taille du logo plus grande sur grands écrans */
+    height: auto !important;  /* Conserve les proportions du logo */
   }
-}
-
-.navbar-nav .nav-item .nav-link {
-  font-size: 20px;
-  margin-left: 30px;
-  padding: 10px 15px;  /* Ajout de padding pour plus d'espace interne */
 }
 
