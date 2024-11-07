@@ -523,3 +523,24 @@ nav ul li a:hover {
     display: block;
 }
 
+
+/* Media Queries pour les écrans de type Mac (1280px et plus) */
+@media (min-width: 1280px) {
+  /* Améliorer la taille du logo pour les grands écrans */
+  .logo-container img {
+    width: 150px;
+  }
+
+  /* Ajuster les éléments du menu */
+  .navbar-nav .nav-item .nav-link {
+    font-size: 20px;
+  }
+
+  .container {
+    max-width: 1100px; /* Largeur de la page ajustée pour les grands écrans */
+  }
+
+  .footer {
+    padding: 60px 0; /* Espacement plus large pour un meilleur effet visuel sur grand écran */
+  }
+}
