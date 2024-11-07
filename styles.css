@@ -544,3 +544,22 @@ nav ul li a:hover {
     padding: 60px 0; /* Espacement plus large pour un meilleur effet visuel */
   }
 }
+
+@media (min-width: 1280px) {
+  .navbar-nav .nav-item .nav-link {
+    font-size: 20px; /* Agrandit la taille du texte pour les écrans plus larges */
+    margin-left: 30px; /* Plus d'espacement entre les éléments */
+    padding: 10px 15px; /* Espacement interne autour des liens */
+  }
+
+  .logo-container img {
+    width: 120px; /* Taille du logo plus grande sur grands écrans */
+  }
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 20px;
+  margin-left: 30px;
+  padding: 10px 15px;  /* Ajout de padding pour plus d'espace interne */
+}
+
