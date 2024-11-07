@@ -523,8 +523,7 @@ nav ul li a:hover {
     display: block;
 }
 
-
-/* Media Queries pour les écrans de type Mac (1280px et plus) */
+/* Media Queries pour les écrans de type Mac (environ 1280px et plus) */
 @media (min-width: 1280px) {
   /* Améliorer la taille du logo pour les grands écrans */
   .logo-container img {
@@ -533,7 +532,8 @@ nav ul li a:hover {
 
   /* Ajuster les éléments du menu */
   .navbar-nav .nav-item .nav-link {
-    font-size: 20px;
+    font-size: 20px; /* Augmenter la taille des liens */
+    margin: 0 25px; /* Plus d'espacement entre les liens */
   }
 
   .container {
@@ -541,6 +541,6 @@ nav ul li a:hover {
   }
 
   .footer {
-    padding: 60px 0; /* Espacement plus large pour un meilleur effet visuel sur grand écran */
+    padding: 60px 0; /* Espacement plus large pour un meilleur effet visuel */
   }
 }
