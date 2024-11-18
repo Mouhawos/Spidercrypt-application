@@ -470,6 +470,21 @@ nav ul li a:hover {
 }
 
 
+/* Pour les écrans d'ordinateurs portables */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav {
+    justify-content: space-between; /* Centrer les éléments de la navbar avec un espace entre eux */
+  }
+  .container {
+    padding: 30px; /* Moins de padding que sur les grands écrans */
+  }
+  .form-title {
+    font-size: 35px; /* Ajuster la taille du titre pour les écrans plus petits */
+  }
+}
+
+
+
       .device {
             width: 100%;
             max-width: 400px;
