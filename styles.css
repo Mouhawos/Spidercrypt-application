@@ -470,16 +470,19 @@ nav ul li a:hover {
 }
 
 
-/* Pour les écrans d'ordinateurs portables */
-@media (min-width: 768px) and (max-width: 991px) {
+/* Pour les ordinateurs portables (Mac, Acer, etc.) */
+@media (min-width: 768px) and (max-width: 1366px) {
   .navbar-nav {
-    justify-content: space-between; /* Centrer les éléments de la navbar avec un espace entre eux */
+    justify-content: space-between; /* Espacer les éléments uniformément */
   }
   .container {
-    padding: 30px; /* Moins de padding que sur les grands écrans */
+    padding: 20px 30px; /* Ajuster le padding horizontal et vertical */
   }
   .form-title {
-    font-size: 35px; /* Ajuster la taille du titre pour les écrans plus petits */
+    font-size: 32px; /* Taille de police légèrement réduite */
+  }
+  .btn {
+    padding: 10px 20px; /* Ajuster les boutons pour une meilleure ergonomie */
   }
 }
 
