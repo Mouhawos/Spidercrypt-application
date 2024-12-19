@@ -456,16 +456,30 @@ nav ul li a:hover {
 }
 
 
-/* Pour les écrans d'ordinateurs de bureau et les tablettes larges */
+/* Pour les écrans de bureau et tablettes larges */
 @media (min-width: 992px) {
   .navbar-nav {
-    justify-content: flex-end;
+    justify-content: center; /* Centrer le menu */
   }
+
   .container {
-    padding: 40px;
+    padding: 40px 20px; /* Ajustement des marges */
   }
+
   .form-title {
-    font-size: 40px;
+    font-size: 2.5rem; /* Taille dynamique */
+    line-height: 1.2; /* Espacement des lignes */
+  }
+}
+
+/* Pour les écrans extra-larges */
+@media (min-width: 1200px) {
+  .container {
+    padding: 50px 30px; /* Plus d'espace */
+  }
+
+  .form-title {
+    font-size: 3rem; /* Agrandir le titre */
   }
 }
 
@@ -544,43 +558,8 @@ nav ul li a:hover {
     display: block;
 }
 
-/* Media Queries pour les écrans de type Mac (environ 1280px et plus) */
-@media (min-width: 1280px) {
-  /* Améliorer la taille du logo pour les grands écrans */
-  .logo-container img {
-    width: 150px;
-  }
 
-  /* Ajuster les éléments du menu */
-  .navbar-nav .nav-item .nav-link {
-    font-size: 20px; /* Augmenter la taille des liens */
-    margin: 0 25px; /* Plus d'espacement entre les liens */
-  }
 
-  .container {
-    max-width: 1100px; /* Largeur de la page ajustée pour les grands écrans */
-  }
 
-  .footer {
-    padding: 60px 0; /* Espacement plus large pour un meilleur effet visuel */
-  }
-}
-
-@media (min-width: 1280px) {
-  .navbar-nav .nav-item .nav-link {
-    font-size: 20px !important;  /* Agrandit la taille du texte pour les écrans plus larges */
-    margin-left: 40px !important;  /* Augmente l'espacement entre les éléments du menu */
-    padding: 10px 20px !important;  /* Ajout de padding pour plus d'espace interne */
-  }
-
-  .logo-container {
-    margin-right: 50px !important;  /* Augmente l'espace à droite du logo */
-  }
-
-  .logo-container img {
-    width: 120px !important;  /* Taille du logo plus grande sur grands écrans */
-    height: auto !important;  /* Conserve les proportions du logo */
-  }
-}
 
 
