@@ -559,6 +559,52 @@ nav ul li a:hover {
 }
 
 
+/* Pour les ordinateurs portables (écrans entre 1024px et 1366px de large) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    /* Ajustements de la barre de navigation */
+    .navbar-nav {
+        font-size: 1.2rem; /* Augmenter légèrement la taille des liens pour les rendre plus lisibles */
+        justify-content: space-between; /* Espacement uniforme entre les éléments */
+    }
+
+    /* Ajuster les titres principaux */
+    .hero-title {
+        font-size: 2.5rem; /* Taille de police plus grande pour le titre */
+        text-align: center; /* Centrer les titres */
+    }
+
+    /* Ajuster l'espacement du contenu dans la section hero */
+    .hero-content {
+        padding: 50px 20px; /* Augmenter l'espacement pour une meilleure présentation */
+    }
+
+    /* Ajuster la taille des images */
+    .centered-image img {
+        width: 80%; /* Réduire la taille des images */
+        margin: 0 auto; /* Centrer les images */
+    }
+
+    /* Ajuster les cartes pour les ordinateurs portables */
+    .custom-card {
+        margin-bottom: 30px; /* Espacement plus grand entre les cartes */
+    }
+
+    /* Adapter l'affichage des icônes sociales */
+    .social-icons a {
+        margin: 0 15px; /* Plus d'espace entre les icônes */
+    }
+
+    /* Pour les sections du footer */
+    footer {
+        text-align: center;
+        padding: 20px 0; /* Un peu plus d'espace pour le footer */
+    }
+
+    /* Ajuster la largeur de la section API pour une meilleure lisibilité */
+    .api-content {
+        font-size: 1rem; /* Taille de police confortable pour la lecture */
+    }
+}
 
 
 
