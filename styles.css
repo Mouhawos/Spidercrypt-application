@@ -208,7 +208,7 @@ p, .hero-2 p {
 
 /* Styles améliorés pour le titre de la deuxième section héros */
 .hero-2 .hero-title {
-  font-size: 20px; /* J'ai légèrement augmenté la taille du titre */
+  font-size: 30px; /* J'ai légèrement augmenté la taille du titre */
   margin-bottom: 30px; /* Réduit l'espacement en bas du titre */
   line-height: 1.5; /* Ajuste la hauteur de ligne pour une meilleure lisibilité */
   color: #000; /* Conserve la couleur du titre */
@@ -272,7 +272,7 @@ User
 
 /* Styles améliorés pour le titre de la deuxième section héros */
 .hero-2 .hero-title {
-  font-size: 40px; /* J'ai légèrement augmenté la taille du titre */
+  font-size: 20px; /* J'ai légèrement augmenté la taille du titre */
   margin-bottom: 30px; /* Réduit l'espacement en bas du titre */
   line-height: 1.5; /* Ajuste la hauteur de ligne pour une meilleure lisibilité */
   color: #000; /* Conserve la couleur du titre */
