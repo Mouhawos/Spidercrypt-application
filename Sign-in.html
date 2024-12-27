@@ -1,38 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-    <link rel="stylesheet" href="Sign-in.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spidercrypt | Connexion</title>
+
+  <!-- Script Firebase en module ES6 -->
+  <script type="module">
+    // Importation des fonctions Firebase nécessaires
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAuth, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+
+    // Configuration Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyDMcukeRAeGsokKf4cW71S0_W6qSPDojkE",
+      authDomain: "spiderauth-8c20a.firebaseapp.com",
+      projectId: "spiderauth-8c20a",
+      storageBucket: "spiderauth-8c20a.firebasestorage.app",
+      messagingSenderId: "1094137770194",
+      appId: "1:1094137770194:web:98df00d64997cd63eb3d0b",
+      measurementId: "G-KMR3PWXZWR"
+    };
+
+    // Initialisation de Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const analytics = getAnalytics(app);
+
+    // Fonction pour envoyer le lien magique
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('login-form');
+      const messageElement = document.getElementById('message');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+
+        // Configurer l'URL de redirection après la connexion via le lien magique
+        const actionCodeSettings = {
+          url: 'https://app.spidercrypt.com/', // URL de redirection après authentification
+          handleCodeInApp: true,
+        };
+
+        try {
+          // Envoi du lien magique par email
+          await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+
+          // Sauvegarder l'email pour la vérification
+          window.localStorage.setItem('emailForSignIn', email);
+
+          // Afficher un message de succès
+          messageElement.textContent = 'Lien envoyé ! Vérifiez votre email.';
+        } catch (error) {
+          // Afficher le message d'erreur
+          messageElement.textContent = `Erreur : ${error.message}`;
+        }
+      });
+    });
+  </script>
+
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #00bcd4;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input[type="email"] {
+      padding: 12px;
+      background: #121212;
+      border: 2px solid #1e88e5;
+      border-radius: 5px;
+      color: #e0e0e0;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input[type="email"]:focus {
+      border-color: #00bcd4;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+    }
+
+    button {
+      padding: 12px;
+      background: #ff5722;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #e64a19;
+      box-shadow: 0 5px 15px rgba(255, 87, 34, 0.5);
+    }
+
+    #message {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #4caf50;
+    }
+
+    .footer {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #757575;
+    }
+  </style>
 </head>
 <body>
-    <div class="login-container">
-        <img src="logo.png" alt="Logo" class="logo">
-        <h2>Connexion</h2>
-        <form id="login-form">
-            <div class="input-group">
-                <label for="username">Nom d'utilisateur</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Se connecter</button>
-        </form>
-        <div id="error-message"></div>
-        <div class="social-login">
-            <button id="google-login" class="social-button google">
-                <img src="https://img.clerk.com/static/google.svg?width=160" alt="Sign in with Google">
-                Se connecter avec Google
-            </button>
-            <button id="facebook-login" class="social-button facebook">
-                <img src="https://img.clerk.com/static/facebook.svg?width=160" alt="Sign in with Facebook">
-                Se connecter avec Facebook
-            </button>
-        </div>
-    </div>
-    <script src="app.js"></script>
+  <div class="container">
+    <h1>Connexion sécurisée</h1>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Entrez votre email" required>
+      <button type="submit">Recevoir le lien magique</button>
+    </form>
+    <p id="message"></p>
+    <div class="footer">Spidercrypt | Cybersécurité d'exception</div>
+  </div>
 </body>
 </html>
