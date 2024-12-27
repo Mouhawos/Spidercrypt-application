@@ -7,57 +7,60 @@
 
   <!-- Script Firebase en module ES6 -->
   <script type="module">
-    // Importation des fonctions Firebase nécessaires
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
     import { getAuth, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
 
-    // Configuration Firebase
-    const firebaseConfig = {
-      apiKey: "AIzaSyDMcukeRAeGsokKf4cW71S0_W6qSPDojkE",
-      authDomain: "spiderauth-8c20a.firebaseapp.com",
-      projectId: "spiderauth-8c20a",
-      storageBucket: "spiderauth-8c20a.firebasestorage.app",
-      messagingSenderId: "1094137770194",
-      appId: "1:1094137770194:web:98df00d64997cd63eb3d0b",
-      measurementId: "G-KMR3PWXZWR"
-    };
+    // Charger dynamiquement la configuration Firebase
+    async function initializeFirebase() {
+      const firebaseConfig = {
+        apiKey: "AIzaSyDMcukeRAeGsokKf4cW71S0_W6qSPDojkE",
+        authDomain: "spiderauth-8c20a.firebaseapp.com",
+        projectId: "spiderauth-8c20a",
+        storageBucket: "spiderauth-8c20a.firebasestorage.app",
+        messagingSenderId: "1094137770194",
+        appId: "1:1094137770194:web:98df00d64997cd63eb3d0b",
+        measurementId: "G-KMR3PWXZWR"
+      };
 
-    // Initialisation de Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const analytics = getAnalytics(app);
+      // Initialiser Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app); // Initialiser l'authentification
+      const analytics = getAnalytics(app); // Si vous souhaitez utiliser les analytics
 
-    // Fonction pour envoyer le lien magique
-    document.addEventListener('DOMContentLoaded', function () {
-      const form = document.getElementById('login-form');
-      const messageElement = document.getElementById('message');
+      // Configurer la logique de connexion
+      setupLogin(auth);
+    }
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
+    // Configurer la logique de connexion
+    function setupLogin(auth) {
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('login-form');
+        const messageElement = document.getElementById('message');
 
-        // Configurer l'URL de redirection après la connexion via le lien magique
-        const actionCodeSettings = {
-          url: 'https://app.spidercrypt.com/', // URL de redirection après authentification
-          handleCodeInApp: true,
-        };
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const email = document.getElementById('email').value;
 
-        try {
-          // Envoi du lien magique par email
-          await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+          const actionCodeSettings = {
+            url: 'https://app.spidercrypt.com/', // URL vers laquelle rediriger après la connexion
+            handleCodeInApp: true,
+          };
 
-          // Sauvegarder l'email pour la vérification
-          window.localStorage.setItem('emailForSignIn', email);
-
-          // Afficher un message de succès
-          messageElement.textContent = 'Lien envoyé ! Vérifiez votre email.';
-        } catch (error) {
-          // Afficher le message d'erreur
-          messageElement.textContent = `Erreur : ${error.message}`;
-        }
+          try {
+            // Envoi du lien magique par email
+            await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+            window.localStorage.setItem('emailForSignIn', email); // Sauvegarder l'email localement
+            messageElement.textContent = 'Lien envoyé ! Vérifiez votre email.';
+          } catch (error) {
+            messageElement.textContent = `Erreur : ${error.message}`;
+          }
+        });
       });
-    });
+    }
+
+    // Initialiser Firebase
+    initializeFirebase();
   </script>
 
   <style>
@@ -158,3 +161,4 @@
   </div>
 </body>
 </html>
+
