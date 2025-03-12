@@ -1,35 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="path/to/your/styles.css"> <!-- Ajoutez votre fichier CSS -->
-    <meta name="description" content="Découvrez nos plans de tarification pour les services Spidercrypt. Choisissez le meilleur plan pour vos besoins en cybersécurité.">
-    <title>Pricing Page - Spidercrypt</title>
-    <link rel="icon" href="logo-no-background.png" sizes="512x512" type="image/png">
-    <!-- Inclure le script de la bibliothèque Stripe pour le tableau de tarification -->
- 
+    <title>Payment</title>
+
+    <!-- Ant Design CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.23.1/antd.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc; /* Fond clair professionnel */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 450px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.15);
+            text-align: center;
+        }
+
+        h2 {
+            color: #0056b3;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .plan-options {
+            text-align: left;
+        }
+
+        .ant-radio-group {
+            width: 100%;
+        }
+
+        .ant-radio-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            margin: 8px 0;
+            background: #f9fbff;
+            border: 1px solid #d9e6ff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .ant-radio-wrapper:hover {
+            border-color: #0056b3;
+            background: #e8f0ff;
+        }
+
+        .pay-button {
+            width: 100%;
+            height: 45px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: #0056b3;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        .pay-button:hover {
+            background: #003f80;
+            box-shadow: 0px 0px 12px rgba(0, 123, 255, 0.5);
+        }
+
+        .secure {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .api-key {
+            margin-top: 15px;
+            font-size: 14px;
+            color: green;
+            background-color: #f0fdf4;
+            padding: 10px;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <header class="header transparent">
-        <!-- Inclure le même en-tête que dans la première page si nécessaire -->
-    </header>
 
-    <main>
-        <!-- Contenu spécifique à la page de tarification -->
+    <div class="container">
+        <h2>Paiement sécurisé</h2>
+        
+        <div class="plan-options">
+            <div class="ant-radio-group">
+                <label class="ant-radio-wrapper">
+                    <span>💳 Basic - 20$/mois</span>
+                    <input type="radio" name="plan" value="basic" checked>
+                </label>
 
-    </main>
+                <label class="ant-radio-wrapper">
+                    <span>🚀 Standard - 30$/mois</span>
+                    <input type="radio" name="plan" value="standard">
+                </label>
 
-    <footer>
-        <!-- Inclure le même pied de page que dans la première page si nécessaire -->
-    </footer>
+                <label class="ant-radio-wrapper">
+                    <span>🔥 Premium - 120$/mois</span>
+                    <input type="radio" name="plan" value="premium">
+                </label>
+
+                <label class="ant-radio-wrapper">
+                    <span>💰 Pay-as-you-go - 0,25$/unité</span>
+                    <input type="radio" name="plan" value="payg">
+                </label>
+            </div>
+        </div>
+
+        <button class="pay-button" onclick="handleCheckout()">Procéder au paiement</button>
+
+        <p class="secure">🔒 Paiement sécurisé via Stripe</p>
+
+        <!-- Zone pour afficher la clé API OAuth2 après paiement -->
+        <div class="api-key" id="api-key-container">
+            <p><strong>Votre clé API OAuth2:</strong> <span id="api-key"></span></p>
+        </div>
+    </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            console.log("DOM complètement chargé et analysé");
-            // Vous pouvez accéder et manipuler les éléments DOM ici
-        });
+        async function handleCheckout() {
+            const planType = document.querySelector('input[name="plan"]:checked').value;
+            
+            try {
+                const response = await fetch("http://localhost:3000/create-checkout-session", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ planType }),
+                });
+
+                const data = await response.json();
+                if (data.url) {
+                    window.location.href = data.url; // Redirige vers Stripe Checkout
+                } else {
+                    alert("Erreur lors de la création de la session de paiement.");
+                }
+            } catch (error) {
+                alert("Une erreur est survenue. Veuillez réessayer.");
+            }
+        }
+
+        async function handlePaymentSuccess(sessionId) {
+            try {
+                const response = await fetch("http://localhost:3000/payment-success", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ sessionId, userId: 'USER_ID' }) // Remplacez USER_ID par l'ID utilisateur
+                });
+
+                const data = await response.json();
+                if (data.apiKey) {
+                    // Afficher la clé API OAuth2
+                    document.getElementById("api-key-container").style.display = 'block';
+                    document.getElementById("api-key").textContent = data.apiKey;
+                } else {
+                    alert("Erreur lors de la récupération de la clé API.");
+                }
+            } catch (error) {
+                alert("Une erreur est survenue. Veuillez réessayer.");
+            }
+        }
     </script>
+
 </body>
 </html>
 
